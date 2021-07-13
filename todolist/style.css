@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@100;200;300;400;600&display=swap');
+/* css reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main wrapper styling */
+
+#main_wrapper{
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.heading h1{
+    font-family: 'Merienda', cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+/* task wrapper styling */
+.task_wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.task_wrapper h2{
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.task_wrapper input,.task_wrapper #taskdesc{
+    width: 80%;
+    font-size: 2rem;
+    margin-top: 1rem;
+    outline: none;
+    height: 4rem;
+    padding-left:1rem;
+}
+
+.task_wrapper #taskdesc{
+    height: 10rem;
+    padding-top: 1rem;
+    resize: none;
+}
+.task_wrapper .add{
+    width: 80%;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    padding:1rem 0 ;
+    background-color: rgb(6, 108, 216);
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* task wrapper styling */
+.alltasks{
+    width: 80%;
+    margin:1rem auto;
+}
+
+/* styles a single task */
+.task{
+    padding: 10px;
+    position: relative;
+    background-color: ivory;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 2rem 0;
+}
+.name_and_action{
+    display: flex;
+    justify-content: space-between;
+    margin:0.5rem auto;
+}
+.name_and_action h3{
+    font-size: 1.8rem;
+    height: 2rem;
+}
+
+.name_and_action #togglemenu{
+    height: 2rem;
+    margin-top: 0;
+    width: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+.name_and_action i{
+    font-size: 1.6rem;
+}
+
+.description{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+.status{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid gray;
+}
+
+
+/* menu  or action buttons styling*/
+.menu{
+    display: flex;
+    width:100px;
+    margin-right: 2rem;
+    justify-content: space-between;
+}
+.menu i{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.menu .complete{
+    color: green;
+}
+.menu .edit{
+    color: rgb(255, 166, 0);
+}
+.menu .delete{
+    color: red;
+}
+.menuOption{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.optionName{
+    display: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.menuOption:hover .optionName{
+    display: inline;
+    position: absolute;
+    top: 20px;
+}
+
+/* go to add a task button styling */
+
+.gototasks{
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: green;
+    margin-top: 2rem;
+}
+.gototasks i{
+    font-size: 2rem;
+}
+.gotoaddtask,.gotoaddtask i{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.gotoaddtask {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: rgb(6, 108, 216);
+}
+.notask{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2.6rem;
+    color: rgb(75, 75, 75);
+}
+
+
+/* edit page styling */
+
+.editPage{
+    width: 70%;
+    height: 90vh;
+    position: absolute;
+    top: 2rem;
+    z-index: 1000;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+.editPage h3{
+    font-size: 3rem;
+}
+.editPage textarea{
+    margin-bottom: 1rem;
+}
+.editPage .btns{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.editPage button{
+    width: 50%;
+    height: 4rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.editPage .save{
+    background-color: rgb(6, 108, 216);
+}
+.editPage .cancel{
+    background-color: rgb(238, 67, 0);
+}
+
+/* responsive design */
+
+@media screen and (max-width:500px){
+    html{
+        font-size: 9px;
+    }
+    #main_wrapper{
+        width: 100%;
+    }
+    .alltasks{
+        width: 100%;
+    }
+    .editPage{
+        width: 98%;
+    }
+    .editPage input, .editPage #taskdesc{
+        padding: 0%;
+        width:90%;
+    }
+}
+
+
+
