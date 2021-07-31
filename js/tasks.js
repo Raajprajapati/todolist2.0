@@ -106,7 +106,7 @@ function showTasks(){
     // check if there is a previoulsy saved task in local storage if data not available then else runs the first block else show it on screen
     if(!tasksData || tasksData.length ==0){
         tasksData = []
-        const noData = `<h3 class="notask">Nothing to show here !!!</br>Click on Add button to add some something.</h3>`
+        const noData = `<h3 class="notask">Nothing to show here !!!</br>Click on Add button to add something.</h3>`
         alltasks.innerHTML = noData;
     }else{
         alltasks.innerHTML = ""
